@@ -43,7 +43,12 @@ export const Header = () => {
             </NavLink>
           ))}
         </nav>
-        <Button className="hidden lg:block" variant="light">
+        <Button
+          as="link"
+          href="/#contacts"
+          className="hidden lg:block"
+          variant="light"
+        >
           Отправить заявку
         </Button>
       </div>

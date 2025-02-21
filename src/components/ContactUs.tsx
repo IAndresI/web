@@ -16,7 +16,7 @@ export const ContactUs = () => {
       return alert("Сообщние должно быть более 50-ти символов!");
     }
     setFormData(initialFormState);
-    return alert("Сообщние успешно отправлено!");
+    return alert("Заявка успешно отправлено!");
   };
   return (
     <section id="contacts" className="">
@@ -70,7 +70,7 @@ export const ContactUs = () => {
               placeholder="Введите ваше сообщение"
             />
           </label>
-          <Button className="">Отправить сообщение</Button>
+          <Button className="">Отправить заявку</Button>
         </form>
         <img
           className="absolute w-[359px]  right-0 top-1/2 -translate-y-1/2"

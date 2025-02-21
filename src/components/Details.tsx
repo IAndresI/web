@@ -99,7 +99,9 @@ export const Details = () => {
             Контактируйте с нами, чтобы узнать, как IPv6 может улучшить вашу
             сеть и подготовить ее к будущему.
           </div>
-          <Button className="w-fit">Подробнее</Button>
+          <Button as="link" href="/#contacts" className="w-fit">
+            Подробнее
+          </Button>
         </div>
         <img
           className="absolute w-[359px] hidden lg:block right-[110px] top-1/2 -translate-y-1/2"

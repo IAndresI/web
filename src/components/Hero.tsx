@@ -14,7 +14,9 @@ export const Hero = () => {
           производительность сети. Узнайте, почему переход на IPv6 — это шаг в
           будущее цифровой связи.
         </p>
-        <Button className="w-fit">Узнать больше</Button>
+        <Button as="link" href="/#details" className="w-fit">
+          Узнать больше
+        </Button>
       </div>
       <img
         className="-order-[1] md:order-1 max-w-[400px] lg:max-w-full mx-auto"
