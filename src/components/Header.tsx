@@ -1,33 +1,52 @@
-import { Button } from "./Button"
-import { SvgLogo } from "./svg/SvgLogo"
+import { NavLink } from "react-router-dom";
+import { Button } from "./Button";
+import { SvgLogo } from "./svg/SvgLogo";
 
 const links = [
-    {
-        label: "About us",
-        link: "#about-us"
-    },{
-        label: "Services",
-        link: "#serice"
-    },{
-        label: "Use Cases",
-        link: "#use-cases"
-    },{
-        label: "Pricing",
-        link: "#pricing"
-    }
-]
+  {
+    label: "Детали",
+    link: "/#details",
+  },
+  {
+    label: "Контакты",
+    link: "/#contacts",
+  },
+  {
+    label: "Преимущества",
+    link: "/advantages",
+  },
+  {
+    label: "Отзывы",
+    link: "/reviews",
+  },
+];
 
 export const Header = () => {
-    return (
-        <header className="flex items-center justify-between mt-[60px] mb-[70px]">
-            <SvgLogo/>
-            <div className="flex items-center gap-10">
-            <nav className="flex items-center gap-10">
-                {
-                    links.map(link => <a className="text-md leading-[28px]" key={link.label} href={link.link}>{link.label}</a>)}
-            </nav>
-            <Button variant="light">Request a quote</Button>
-            </div>
-        </header>
-    )
-}
+  return (
+    <header className="flex flex-col md:flex-row md:gap-10 gap-7 items-center justify-between mt-10 lg:mt-[60px] mb-[30px] lg:mb-[70px]">
+      <NavLink
+        to="/"
+        className="cursor-pointer transition hover:scale-110 focus:scale-110 active:scale-100 outline-0"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        <SvgLogo />
+      </NavLink>
+      <div className="flex items-center gap-10">
+        <nav className="flex items-center gap-10">
+          {links.map((link) => (
+            <NavLink
+              className="md:text-md transition hover:text-green focus:text-green focus:text-balck outline-none leading-[28px]"
+              key={link.label}
+              to={link.link}
+            >
+              {link.label}
+            </NavLink>
+          ))}
+        </nav>
+        <Button className="hidden lg:block" variant="light">
+          Отправить заявку
+        </Button>
+      </div>
+    </header>
+  );
+};

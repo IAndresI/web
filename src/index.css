@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-green: #B9FF66;
-  --color-dark: #191A23;
-  --color-gray: #F3F3F3;
+  --color-green: #b9ff66;
+  --color-dark: #191a23;
+  --color-gray: #f3f3f3;
 
   --text-base: 1.125rem;
   --text-md: 1.25rem;
@@ -13,7 +13,7 @@
 }
 
 :root {
-  font-family: "Space Grotesk", serif;
+  font-family: "Manrope", serif;
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.5;
@@ -29,7 +29,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .custom-container {
-  max-width: 1120px;
+  max-width: 1274px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+.swiper-pagination {
+  --swiper-pagination-bottom: 0px;
+}
+
+.swiper-button-next {
+  --swiper-navigation-top-offset: auto;
+  --swiper-navigation-color: #b9ff66;
+  bottom: 0;
+  margin-right: 100px;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  z-index: 11;
+}
+
+.swiper-button-prev {
+  --swiper-navigation-top-offset: auto;
+  --swiper-navigation-color: #b9ff66;
+  margin-left: 100px;
+  bottom: 0;
+}
+
+.swiper-pagination-bullet-active {
+  --swiper-pagination-color: #b9ff66;
 }

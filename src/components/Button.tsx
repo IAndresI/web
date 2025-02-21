@@ -3,8 +3,8 @@ import { twMerge } from "tailwind-merge";
 
 const buttonVariants = {
   light:
-    "border border-dark",
-  dark: "bg-dark text-white",
+    "border border-dark active:text-black hover:text-green focus:text-green hover:border-green focus:border-green",
+  dark: "bg-dark text-white active:bg-black hover:bg-green focus:bg-green",
 };
 
 type BaseProps = {
@@ -32,7 +32,9 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const allClassNames = twMerge(
-    `rounded-[14px] cursor-pointer text-md py-5 px-[35px] leading-[28px] ${variant ? buttonVariants[variant] : buttonVariants["dark"]} ${className || ""} `,
+    `rounded-[14px] cursor-pointer transition text-md py-5 px-[35px] leading-[28px] ${
+      variant ? buttonVariants[variant] : buttonVariants["dark"]
+    } ${className || ""} `
   );
   if (props.as === "link") {
     return (
