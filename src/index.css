@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-green: #B9FF66;
+  --color-dark: #191A23;
+  --color-gray: #F3F3F3;
+
+  --text-base: 1.125rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.875rem;
+  --text-xl: 2.5rem;
+  --text-2xl: 3.75rem;
+}
+
+:root {
+  font-family: "Space Grotesk", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark light;
+  background-color: white;
+  color: black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
