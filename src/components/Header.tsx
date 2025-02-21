@@ -23,7 +23,7 @@ const links = [
 
 export const Header = () => {
   return (
-    <header className="flex flex-col md:flex-row md:gap-10 gap-7 items-center justify-between mt-10 lg:mt-[60px] mb-[30px] lg:mb-[70px]">
+    <header className="flex sticky top-0 z-20 bg-white flex-col md:flex-row md:gap-10 gap-7 items-center justify-between mt-5 lg:mt-[35px] py-5 mb-[5px] lg:mb-[45px]">
       <NavLink
         to="/"
         className="cursor-pointer transition hover:scale-110 focus:scale-110 active:scale-100 outline-0"

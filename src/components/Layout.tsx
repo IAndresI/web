@@ -16,7 +16,7 @@ export const Layout = () => {
   }, [location]);
 
   return (
-    <div className="custom-container">
+    <div className="custom-container relative">
       <Header />
       <main className="grid gap-[140px] mb-[140px]">
         <Outlet />
